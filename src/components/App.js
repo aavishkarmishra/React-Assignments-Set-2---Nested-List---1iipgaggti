@@ -1,161 +1,166 @@
-import React, { Component, useState } from "react";
-import "./../styles/App.css";
+import React, { Component, useState } from 'react';
+import './../styles/App.css';
+import NestedDropdown from './NestedDropdown';
 
 // Do not alter the states const and values inside it.
 const states = [
   {
-    name: "Madhya Pradesh",
+    name: 'Madhya Pradesh',
     cities: [
       {
-        name: "Indore",
+        name: 'Indore',
         towns: [
           {
-            name: "Mhow",
+            name: 'Mhow'
           },
           {
-            name: "Dewas",
-          },
-        ],
+            name: 'Dewas'
+          }
+        ]
       },
       {
-        name: "Bhopal",
+        name: 'Bhopal',
         towns: [
           {
-            name: "Manit",
+            name: 'Manit'
           },
           {
-            name: "Berasia",
-          },
-        ],
+            name: 'Berasia'
+          }
+        ]
       },
       {
-        name: "Gwalior",
+        name: 'Gwalior',
         towns: [
           {
-            name: "Ajaypur",
-          },
-        ],
-      },
-    ],
+            name: 'Ajaypur'
+          }
+        ]
+      }
+    ]
   },
   {
-    name: "Jharkhand",
+    name: 'Jharkhand',
     cities: [
       {
-        name: "Dhanbad",
+        name: 'Dhanbad',
         towns: [
           {
-            name: "IIT(ISM) Dhanbad",
+            name: 'IIT(ISM) Dhanbad'
           },
           {
-            name: "Hirapur",
-          },
-        ],
+            name: 'Hirapur'
+          }
+        ]
       },
       {
-        name: "Wasseypur",
+        name: 'Wasseypur',
         towns: [
           {
-            name: "Sardar khan's",
+            name: "Sardar khan's"
           },
           {
-            name: "Faizal khan's",
-          },
-        ],
+            name: "Faizal khan's"
+          }
+        ]
       },
       {
-        name: "Mirzapur",
+        name: 'Mirzapur',
         towns: [
           {
-            name: "Kaleen bhaiya's",
+            name: "Kaleen bhaiya's"
           },
           {
-            name: "Guddu bhaiya's",
-          },
-        ],
-      },
-    ],
+            name: "Guddu bhaiya's"
+          }
+        ]
+      }
+    ]
   },
   {
-    name: "Assam",
+    name: 'Assam',
     cities: [
       {
-        name: "Guwhati",
+        name: 'Guwhati',
         towns: [
           {
-            name: "Amin",
+            name: 'Amin'
           },
           {
-            name: "Jalah",
-          },
-        ],
+            name: 'Jalah'
+          }
+        ]
       },
       {
-        name: "Jungle1",
+        name: 'Jungle1',
         towns: [
           {
-            name: "Tiger found at IIT Guwahati",
+            name: 'Tiger found at IIT Guwahati'
           },
           {
-            name: "Leopard found in IIT Guwahati",
-          },
-        ],
+            name: 'Leopard found in IIT Guwahati'
+          }
+        ]
       },
       {
-        name: "Tezpur",
+        name: 'Tezpur',
         towns: [
           {
-            name: "Dibrugarh",
+            name: 'Dibrugarh'
           },
           {
-            name: "Silchar",
-          },
-        ],
-      },
-    ],
+            name: 'Silchar'
+          }
+        ]
+      }
+    ]
   },
   {
-    name: "Bihar",
+    name: 'Bihar',
     cities: [
       {
-        name: "Patna",
+        name: 'Patna',
         towns: [
           {
-            name: "Sonpur",
+            name: 'Sonpur'
           },
           {
-            name: "Maner",
-          },
-        ],
+            name: 'Maner'
+          }
+        ]
       },
       {
-        name: "Gaya",
+        name: 'Gaya',
         towns: [
           {
-            name: "Bakraur",
+            name: 'Bakraur'
           },
           {
-            name: "Barachatti",
-          },
-        ],
+            name: 'Barachatti'
+          }
+        ]
       },
       {
-        name: "Darbhanga",
+        name: 'Darbhanga',
         towns: [
           {
-            name: "Singhwara",
+            name: 'Singhwara'
           },
           {
-            name: "Jale",
-          },
-        ],
-      },
-    ],
-  },
+            name: 'Jale'
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 function App() {
-  return <div id="main"></div>;
+  return (
+    <div id="main">
+      <NestedDropdown states={states} />
+    </div>
+  );
 }
 
 export default App;
